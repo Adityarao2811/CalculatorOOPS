@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CalculatorOOPS
 {
-    public static class ReadAndWriteInConsole
+    public static class Utility
     {
         public static void ReadMenuforCalcType()
         {
@@ -27,5 +27,16 @@ namespace CalculatorOOPS
                 Console.WriteLine(KeyStore.ExceptionCaughtMessage + e);
             }
         }
+        public static void CalculateExpression(ICalculator calculator,string expression)
+        {
+            string[] expObj = expression.Split('+', '-', '*', '/', 'p', 'c');
+            int firstOperand = Convert.ToInt32(expObj[0]);
+            int secondOperand = Convert.ToInt32(expObj[1]);
+            if(expression.Contains("+"))
+            {
+                calculator.Add(firstOperand, secondOperand);
+            }
+        }
     }
+    
 }
