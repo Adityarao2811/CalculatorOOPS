@@ -15,8 +15,8 @@ Create a fun calculator implementation.
 7) In Main function, the user is asked to choose for which implementation he wants to go for, then enter an equation of the form "aOperationB".
 	eg: 8+9 
 	    10-2
-		5*6
-		90/3
-		30p9
-		12c4
-	Depending on the operation in the equation it should direct to the correct method and output the answer.
+            5*6
+	    90/3
+            30p9
+	    12c4
+    Depending on the operation in the equation it should direct to the correct method and output the answer.
