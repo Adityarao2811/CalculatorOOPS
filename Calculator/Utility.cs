@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace CalculatorOOPS
 {
@@ -29,12 +30,20 @@ namespace CalculatorOOPS
         }
         public static void CalculateExpression(ICalculator calculator,string expression)
         {
-            string[] expObj = expression.Split(KeyStore.OperatorList);
-            int firstOperand = Convert.ToInt32(expObj[0]);
-            int secondOperand = Convert.ToInt32(expObj[1]);
-            if(expression.Contains("+"))
+            Regex regex = new Regex(@"^\d+[+-pc*/]\d+$");
+            if (regex.IsMatch(expression))
             {
-                calculator.Add(firstOperand, secondOperand);
+                string[] expObj = expression.Split(KeyStore.OperatorList);
+                int firstOperand = Convert.ToInt32(expObj[0]);
+                int secondOperand = Convert.ToInt32(expObj[1]);
+                if (expression.Contains("+"))
+                {
+                    calculator.Add(firstOperand, secondOperand);
+                }
+            }
+            else
+            {
+                Console.WriteLine(KeyStore.InvalidExpression);
             }
         }
     }

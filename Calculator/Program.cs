@@ -15,7 +15,6 @@ namespace CalculatorOOPS
                 {
                     calculator = new TCalculator();
                     PromptExpressionAndEvaluate();
-                    
                 }
                 else if (option == 2)
                 {
@@ -34,6 +33,7 @@ namespace CalculatorOOPS
                 Console.WriteLine(KeyStore.ExpressionPromptMessage);
                 string expression = Console.ReadLine();
                 Utility.CalculateExpression(calculator, expression);
+                Console.WriteLine(KeyStore.Seperator);
                 Console.WriteLine(KeyStore.ContinueOrExit);
             }
         }
