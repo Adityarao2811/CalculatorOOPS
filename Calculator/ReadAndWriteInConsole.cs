@@ -24,7 +24,7 @@ namespace CalculatorOOPS
             }
             catch (Exception e)
             {
-                Console.WriteLine(KeyStore.exception + e);
+                Console.WriteLine(KeyStore.ExceptionCaughtMessage + e);
             }
         }
     }
