@@ -9,27 +9,27 @@ namespace CalculatorOOPS
             ICalculator calculator;
             Utility.ReadMenuforCalcType();
             int option = Convert.ToInt32(Console.ReadLine());
-            do
+            while (option != 3) 
             {
                 if (option == 1)
                 {
                     calculator = new TCalculator();
-                    EvaluateExpression();
+                    PromptExpressionAndEvaluate();
                     
                 }
                 else if (option == 2)
                 {
                     calculator = new CCalculator();
-                    EvaluateExpression();
+                    PromptExpressionAndEvaluate();
                 }
                 else
                 {
                     Console.WriteLine(KeyStore.InvalidOption);
                 }
                 option = Convert.ToInt32(Console.ReadLine());
-            } while (option != 3);
+            } 
 
-            void EvaluateExpression()
+            void PromptExpressionAndEvaluate()
             {
                 Console.WriteLine(KeyStore.ExpressionPromptMessage);
                 string expression = Console.ReadLine();

@@ -29,7 +29,7 @@ namespace CalculatorOOPS
         }
         public static void CalculateExpression(ICalculator calculator,string expression)
         {
-            string[] expObj = expression.Split('+', '-', '*', '/', 'p', 'c');
+            string[] expObj = expression.Split(KeyStore.OperatorList);
             int firstOperand = Convert.ToInt32(expObj[0]);
             int secondOperand = Convert.ToInt32(expObj[1]);
             if(expression.Contains("+"))

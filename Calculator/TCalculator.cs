@@ -11,7 +11,7 @@ namespace CalculatorOOPS
         public void Add(int a, int b)
         {
             int sum = a + b;
-            Console.WriteLine(KeyStore.AnswerPrompt+sum);
+            Console.WriteLine(KeyStore.AnswerOutputMessage+sum);
         }
     }
 }
