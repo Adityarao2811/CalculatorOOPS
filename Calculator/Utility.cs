@@ -50,18 +50,35 @@ namespace CalculatorOOPS
             {
                 calculator.Add(firstOperand, secondOperand);
             }
-            if(expression.Contains("-"))
+            else if(expression.Contains("-"))
             {
                 calculator.Subtract(firstOperand, secondOperand);
             }
-            if (expression.Contains("/"))
+            else if (expression.Contains("/"))
             {
                 calculator.Divide(firstOperand, secondOperand);
             }
-            if (expression.Contains("*"))
+            else if (expression.Contains("*"))
             {
                 calculator.Multiply(firstOperand, secondOperand);
             }
+            else if(expression.ToLower().Contains("p"))
+            {
+                calculator.Permutation(firstOperand, secondOperand);
+            }
+            else if (expression.ToLower().Contains("c"))
+            {
+                calculator.Combination(firstOperand, secondOperand);
+            }
+        }
+        public static int Factorial(int num)
+        {
+            int fact=1;
+            for(int i=1;i<=num;i++)
+            {
+                fact *= i;    
+            }
+            return fact;
         }
     }
     
