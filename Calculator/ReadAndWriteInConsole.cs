@@ -9,15 +9,22 @@ namespace CalculatorOOPS
 {
     public static class ReadAndWriteInConsole
     {
-        public static void ReadMenuforCalcType(string menu)
+        public static void ReadMenuforCalcType()
         {
-            string line;
-            using (StreamReader sr = new StreamReader(menu))
+            try
             {
-                while ((line = sr.ReadLine()) != null)
+                string line;
+                using (StreamReader sr = new StreamReader(KeyStore.MenuFilePath))
                 {
-                    Console.WriteLine(line);
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(KeyStore.exception + e);
             }
         }
     }
