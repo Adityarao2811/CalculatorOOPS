@@ -36,14 +36,31 @@ namespace CalculatorOOPS
                 string[] expObj = expression.Split(KeyStore.OperatorList);
                 int firstOperand = Convert.ToInt32(expObj[0]);
                 int secondOperand = Convert.ToInt32(expObj[1]);
-                if (expression.Contains("+"))
-                {
-                    calculator.Add(firstOperand, secondOperand);
-                }
+                PerformOperations(calculator,expression,firstOperand,secondOperand);
             }
             else
             {
                 Console.WriteLine(KeyStore.InvalidExpression);
+            }
+        }
+
+        private static void PerformOperations(ICalculator calculator,string expression,int firstOperand,int secondOperand)
+        {
+            if (expression.Contains("+"))
+            {
+                calculator.Add(firstOperand, secondOperand);
+            }
+            if(expression.Contains("-"))
+            {
+                calculator.Subtract(firstOperand, secondOperand);
+            }
+            if (expression.Contains("/"))
+            {
+                calculator.Divide(firstOperand, secondOperand);
+            }
+            if (expression.Contains("*"))
+            {
+                calculator.Multiply(firstOperand, secondOperand);
             }
         }
     }
