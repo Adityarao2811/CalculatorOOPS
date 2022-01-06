@@ -1,12 +1,21 @@
 ﻿using System;
 
-namespace Calculator
+namespace CalculatorOOPS
 {
-    class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                string a = Keystore.MenuFilePath;
+                ReadAndWriteInConsole.ReadMenuforCalcType(a);
+                
+            } 
+            catch(Exception e)
+            {
+                Console.WriteLine("Exception caught: " + e);
+            }
         }
     }
 }
