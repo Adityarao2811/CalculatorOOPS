@@ -13,5 +13,21 @@ namespace CalculatorOOPS
             int sum = a + b;
             Console.WriteLine(KeyStore.AnswerOutputMessage+sum);
         }
+        public void Subtract(int a, int b)
+        {
+            int difference = a - b;
+            Console.WriteLine(difference);
+        }
+        public void Divide(int a, int b)
+        {
+            float quotient = (float)a / b;
+            Console.WriteLine(quotient);
+        }
+
+        public void Multiply(int a, int b)
+        {
+            int product = a * b;
+            Console.WriteLine(product);
+        }
     }
 }
