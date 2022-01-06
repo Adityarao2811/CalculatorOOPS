@@ -13,17 +13,6 @@ namespace CalculatorOOPS
             int sum = a + b;
             Console.WriteLine(KeyStore.AnswerOutputMessage+sum);
         }
-
-        public void Permutation(int a, int b)
-        {
-            int perm = (Utility.Factorial(a) / Utility.Factorial(a - b));
-            Console.WriteLine(perm);
-        }
-        public void Combination(int a, int b)
-        {
-            int comb = (Utility.Factorial(a) / (Utility.Factorial(a - b)*Utility.Factorial(b)));
-            Console.WriteLine(comb);
-        }
         public void Subtract(int a, int b)
         {
             int difference = a - b;
@@ -39,6 +28,17 @@ namespace CalculatorOOPS
         {
             int product = a * b;
             Console.WriteLine(product);
+        }
+        public void Permutation(int a, int b)
+        {
+            int perm = (Utility.Factorial(a) / Utility.Factorial(a - b));
+            Console.WriteLine(perm);
+        }
+        public void Combination(int a, int b)
+        {
+
+            int comb = (Utility.Factorial(a) / (Utility.Factorial(a - b) * Utility.Factorial(b)));
+            Console.WriteLine(comb);
         }
     }
 }
