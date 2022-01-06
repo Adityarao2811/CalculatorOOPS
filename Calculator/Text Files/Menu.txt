@@ -6,4 +6,4 @@ We have two different types of calculators
 1) Traditional Calculator	2) Crazy Calculator
 
 Choose your Option
-Type 1 to choose traditional Calculator and type 2 choose Crazy Calculator
+Input 1 to choose traditional Calculator and Input 2 choose Crazy Calculator and 3 to Exit
