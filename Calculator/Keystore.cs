@@ -19,7 +19,7 @@ namespace CalculatorOOPS
 
         public static string AnswerOutputMessage = "The answer is ";
 
-        public static char[] OperatorList = { '+', '-', '*', '/', 'p', 'c' };
+        public static char[] OperatorList = { '+', '-', '*', '/', 'p', 'c','P','C' };
 
         public static string InvalidExpression = "Invalid Expression";
     }
